@@ -3,6 +3,7 @@ import commonjs from "@rollup/plugin-commonjs";
 import { nodeResolve } from "@rollup/plugin-node-resolve";
 import typescript from "@rollup/plugin-typescript";
 import peerDepsExternal from "rollup-plugin-peer-deps-external";
+import { vanillaExtractPlugin } from "@vanilla-extract/rollup-plugin";
 
 const extensions = ["js", "jsx", "ts", "tsx", "mjs"];
 
@@ -39,6 +40,9 @@ const config = [
       commonjs({ include: "node_modules/**" }),
       peerDepsExternal(),
       typescript({ tsconfig: "./tsconfig.json" }),
+      vanillaExtractPlugin({
+        identifiers: ({ hash }) => `prefix_${hash}`,
+      }),
     ],
   },
 ];
