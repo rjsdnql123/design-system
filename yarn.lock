@@ -3505,7 +3505,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@vanilla-extract/integration@npm:^7.0.0":
+"@vanilla-extract/integration@npm:^7.0.0, @vanilla-extract/integration@npm:^7.1.2":
   version: 7.1.2
   resolution: "@vanilla-extract/integration@npm:7.1.2"
   dependencies:
@@ -3541,6 +3541,17 @@ __metadata:
   peerDependencies:
     rollup: ^2.0.0 || ^3.0.0 || ^4.0.0
   checksum: 10c0/069e318eccc25e50775d4a80555c1d3126b2618d7026a8ee42fa23bb2d19350d3b97efc95070f2367e0b0c1bbd77037d34362dba84b0251850a00b1f4c111644
+  languageName: node
+  linkType: hard
+
+"@vanilla-extract/vite-plugin@npm:^4.0.7":
+  version: 4.0.7
+  resolution: "@vanilla-extract/vite-plugin@npm:4.0.7"
+  dependencies:
+    "@vanilla-extract/integration": "npm:^7.1.2"
+  peerDependencies:
+    vite: ^4.0.3 || ^5.0.0
+  checksum: 10c0/1d9dd8bdd7767301755ad6f9a4bbecada2437becdb9c28f900d0881bd8206a26762c1d45e24acae673fd68b31debf083deabf76c49a695adf6566176e6932ee2
   languageName: node
   linkType: hard
 
@@ -4529,6 +4540,7 @@ __metadata:
     "@types/react-dom": "npm:^18.2.25"
     "@vanilla-extract/css": "npm:^1.14.2"
     "@vanilla-extract/rollup-plugin": "npm:^1.3.4"
+    "@vanilla-extract/vite-plugin": "npm:^4.0.7"
     mini-css-extract-plugin: "npm:^2.9.0"
     react: "npm:^18.2.0"
     react-dom: "npm:^18.2.0"

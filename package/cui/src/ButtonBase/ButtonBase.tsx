@@ -1,6 +1,6 @@
 import React from "react";
 import { ForwardRefRenderFunction, forwardRef } from "react"
-// import { container } from './ButtonBase.css';
+import { container } from './ButtonBase.css';
 
 const _ButtonBase: ForwardRefRenderFunction<HTMLButtonElement, any> = (props, ref) => {
     const { 
@@ -27,7 +27,7 @@ const _ButtonBase: ForwardRefRenderFunction<HTMLButtonElement, any> = (props, re
         ...other
     } = props
     return <button
-    // className={container}
+    className={container}
     tabIndex={disabled ? -1 : tabIndex}
     // className={clsx(classes.root, className)}
     onClick={onClick}
