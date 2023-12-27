@@ -2,9 +2,7 @@ import { createTheme } from '@vanilla-extract/css';
 
 export const [themeClass, vars] = createTheme({
   color: {
-    brand: 'blue'
+    primary: '#A6D9F7'
   },
-  font: {
-    body: 'arial'
-  }
+  
 });

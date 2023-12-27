@@ -26,7 +26,7 @@ const _ButtonBase: ForwardRefRenderFunction<
 
   return (
     <button
-      className={className || container}
+      className={container}
       type={buttonType}
       ref={ref}
       {...other}
