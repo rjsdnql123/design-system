@@ -1,44 +1,37 @@
 import React from "react";
 import { ForwardRefRenderFunction, forwardRef } from "react";
 import { container } from "./ButtonBase.css";
+import { ButtonTypes } from "src/utils/propsType";
 
-// interface Props {
-//   // type?: ButtonTypes
-//   ghost?: boolean;
-//   loading?: boolean;
-//   shadow?: boolean;
-//   auto?: boolean;
-//   effect?: boolean;
-//   disabled?: boolean;
-//   htmlType?: React.ButtonHTMLAttributes<any>["type"];
-//   icon?: React.ReactNode;
-//   iconRight?: React.ReactNode;
-//   onClick?: React.MouseEventHandler<HTMLButtonElement>;
-//   className?: string;
-// }
-interface ButtonStyleProps {
-  $color?: string;
-}
-
-export interface ButtonProp extends React.HTMLAttributes<HTMLButtonElement> {
+export interface ButtonProp {
+  buttonType?: ButtonTypes;
   isLoading?: boolean;
   color?: string;
-  buttonType?: ButtonType;
+  onClick?: React.MouseEventHandler<HTMLButtonElement>;
+  className?: string;
 }
 
-type ButtonType = "button" | "submit" | "reset";
+const _ButtonBase: ForwardRefRenderFunction<
+  HTMLButtonElement,
+  React.PropsWithChildren<ButtonProp>
+> = (props: React.PropsWithChildren<ButtonProp>, ref) => {
+  const {
+    children,
+    isLoading,
+    buttonType = "button",
+    color,
+    className,
+    ...other
+  } = props;
 
-const _ButtonBase: ForwardRefRenderFunction<HTMLButtonElement, ButtonProp> = (
-  props,
-  ref
-) => {
-  const { children, isLoading, buttonType = "button", color, ...other } = props;
   return (
     <button
-      className={container}
-      type={buttonType} ref={ref} {...props}
+      className={className || container}
+      type={buttonType}
+      ref={ref}
+      {...other}
     >
-       {isLoading ? <div>loading</div> : children}
+      {isLoading ? <div>loading</div> : children}
     </button>
   );
 };
