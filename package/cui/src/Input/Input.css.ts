@@ -1,4 +1,6 @@
-import { style } from "@vanilla-extract/css";
+import { createVar, style } from "@vanilla-extract/css";
+
+const inputDisabled = createVar();
 
 const inputInner = style({
   width: "100%",
@@ -20,6 +22,7 @@ const inputContainer = style({
   borderColor: "#A6D9F7",
   borderRadius: "4px",
   padding: "5px 0",
+  backgroundColor: inputDisabled,
 });
 
-export { inputInner, inputContainer };
+export { inputInner, inputContainer, inputDisabled };

@@ -5,7 +5,9 @@ import React, {
   useState,
 } from "react";
 import InputIcon from "./InputIcon";
-import { inputContainer, inputInner } from "./Input.css";
+import { inputContainer, inputDisabled, inputInner } from "./Input.css";
+import InputLabel from "./InputLabel";
+import { assignInlineVars } from "@vanilla-extract/dynamic";
 
 export type InputProps = {
   value?: string;
@@ -63,12 +65,10 @@ const _Input: ForwardRefRenderFunction<
   const [selfValue, setSelfValue] = useState<string>(initialValue || "");
 
   const focusHandler = (e: React.FocusEvent<HTMLInputElement>) => {
-    // setHover(true);
     onFocus && onFocus(e);
   };
 
   const blurHandler = (e: React.FocusEvent<HTMLInputElement>) => {
-    // setHover(false);
     onBlur && onBlur(e);
   };
 
@@ -93,8 +93,12 @@ const _Input: ForwardRefRenderFunction<
 
   return (
     <div>
-      {label && <label>{label}</label>}
-      <div className={inputContainer}>
+      {label && <InputLabel>{label}</InputLabel>}
+      <div className={inputContainer}
+      style={assignInlineVars({
+        [inputDisabled]: disabled ? 'lightgray' : null
+      })}
+      >
         {icon && <InputIcon icon={icon} {...iconProps}></InputIcon>}
         <input
           className={inputInner}
@@ -112,7 +116,7 @@ const _Input: ForwardRefRenderFunction<
         />
         {iconRight && <InputIcon icon={iconRight} {...iconProps}></InputIcon>}
       </div>
-      {labelRight && labelRight}
+      {labelRight && <InputLabel isRight={true}>{labelRight}</InputLabel>}
     </div>
   );
 };
