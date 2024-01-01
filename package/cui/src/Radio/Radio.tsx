@@ -1,5 +1,6 @@
 import React, { ChangeEvent } from "react";
 import { RadioProps } from "./types";
+import { inputStyle, radioLabelStyle } from "./Radio.css";
 
 const Radio = ({
   className,
@@ -7,6 +8,7 @@ const Radio = ({
   onChange,
   disabled,
   children,
+  name,
   id,
   ...props
 }: React.PropsWithChildren<RadioProps>) => {
@@ -16,10 +18,12 @@ const Radio = ({
   };
 
   return (
-    <label htmlFor={id}>
+    <label htmlFor={id} className={radioLabelStyle}>
       <input
+        className={inputStyle}
         id={id}
         type="radio"
+        name={name}
         checked={checked}
         disabled={disabled}
         onChange={changeHandler}
