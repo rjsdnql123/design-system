@@ -3,6 +3,7 @@ import { style } from "@vanilla-extract/css";
 export const radioLabelStyle = style({
     display: 'flex',
     alignItems: 'center',
+    padding:'2px'
 });
 
 export const inputStyle = style({

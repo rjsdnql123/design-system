@@ -1,6 +1,7 @@
 import React, { ChangeEvent, useEffect, useState } from "react";
 import RadioGroupContext from "./RadioGroupContext";
 import { RadioGroupProps } from "./RadioGroup.type";
+import { radioGroupRootStyle, radioGroupRowStyle } from "./RadioGroup.css";
 
 const RadioGroup = (props: React.PropsWithChildren<RadioGroupProps>) => {
   const {
@@ -40,7 +41,9 @@ const RadioGroup = (props: React.PropsWithChildren<RadioGroupProps>) => {
 
   return (
     <RadioGroupContext.Provider value={contextValue}>
-      <div>{children}</div>
+      <div className={`${radioGroupRootStyle} ${useRow && radioGroupRowStyle} ${className}`}>
+        {children}
+        </div>
     </RadioGroupContext.Provider>
   );
 };
