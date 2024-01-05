@@ -5,6 +5,7 @@ const defaultContext = {
   name: "",
   onChange: () => {},
   value: "",
+  disabled: false
 };
 
 const RadioGroupContext =

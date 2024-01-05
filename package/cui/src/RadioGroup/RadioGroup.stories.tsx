@@ -8,12 +8,13 @@ const meta: Meta<typeof RadioGroup> = {
   component: RadioGroup,
   tags: ["autodocs"],
   args: {
-    name:'hi',
+    name:'food',
+    initialValue: 2,
     children: <>
-      <Radio >라면</Radio>
-      <Radio>짜장면</Radio>
-      <Radio>볶음밥</Radio>
-      <Radio>짬뽕</Radio>
+      <Radio value={1} >라면</Radio>
+      <Radio value={2} >짜장면</Radio>
+      <Radio value={3}>볶음밥</Radio>
+      <Radio value={4}>짬뽕</Radio>
     </>
   }
 };

@@ -1,15 +1,6 @@
-import React, { ChangeEvent } from "react";
+import React, { ChangeEvent, useEffect, useState } from "react";
 import RadioGroupContext from "./RadioGroupContext";
-
-interface RadioGroupProps {
-  value?: string | number;
-  initialValue?: string | number;
-  disabled?: boolean;
-  onChange?: (value: ChangeEvent<HTMLInputElement>) => void;
-  className?: string;
-  useRow?: boolean;
-  name: string;
-}
+import { RadioGroupProps } from "./RadioGroup.type";
 
 const RadioGroup = (props: React.PropsWithChildren<RadioGroupProps>) => {
   const {
@@ -21,36 +12,35 @@ const RadioGroup = (props: React.PropsWithChildren<RadioGroupProps>) => {
     className,
     useRow,
     children,
-    ...other
   } = props;
-  // const onChange = () => {
 
-  // }
+  const [radioSelfValue, setRadioSelfValue] = useState<
+    string | number | undefined
+  >(initialValue);
+
+  const updateState = (event: ChangeEvent<HTMLInputElement>) => {
+    setRadioSelfValue(event.target.value);
+    onChange && onChange(event);
+  };
 
   const contextValue = React.useMemo(
     () => ({
       name: name,
-      onChange(event: ChangeEvent<HTMLInputElement>) {
-        // setValueState(event.target.value);
-
-        if (onChange) {
-          onChange(event);
-        }
-      },
-      value: value,
+      onChange: updateState,
+      value: radioSelfValue,
+      disabled: disabled,
     }),
-    [
-      name,
-      onChange,
-      ,
-      // setValueState
-      value,
-    ]
+    [name, radioSelfValue]
   );
+
+  useEffect(() => {
+    if (value === undefined) return;
+    setRadioSelfValue(value);
+  }, [value]);
 
   return (
     <RadioGroupContext.Provider value={contextValue}>
-      {children}
+      <div>{children}</div>
     </RadioGroupContext.Provider>
   );
 };

@@ -6,7 +6,4 @@ const useRadioGroup = (): RadioGroupContextValue => {
   return React.useContext(RadioGroupContext);
 };
 
-// function useRadioGroup(): RadioGroupContextValue | undefined {
-//     return
-//   }
 export default useRadioGroup;
