@@ -1,6 +1,7 @@
 import React, {
   ForwardRefRenderFunction,
   forwardRef,
+  useEffect,
   useMemo,
   useState,
 } from "react";
@@ -14,7 +15,6 @@ export type InputProps = {
   initialValue?: string;
   placeholder?: string;
   type?: string;
-  htmlType?: string;
   readOnly?: boolean;
   disabled?: boolean;
   label?: string;
@@ -23,9 +23,7 @@ export type InputProps = {
   iconRight?: React.ReactNode;
   iconClickable?: boolean;
   className?: string;
-  clearable?: boolean;
   onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
-  onClearClick?: (e: React.MouseEvent<HTMLDivElement>) => void;
   onFocus?: (e: React.FocusEvent<HTMLInputElement>) => void;
   onBlur?: (e: React.FocusEvent<HTMLInputElement>) => void;
   onIconClick?: (e: React.MouseEvent<HTMLDivElement>) => void;
@@ -40,7 +38,6 @@ const _Input: ForwardRefRenderFunction<
     label,
     labelRight,
     type,
-    htmlType,
     icon,
     iconRight,
     iconClickable,
@@ -49,8 +46,6 @@ const _Input: ForwardRefRenderFunction<
     onChange,
     readOnly,
     value,
-    onClearClick,
-    clearable,
     className,
     onBlur,
     onFocus,
@@ -91,8 +86,13 @@ const _Input: ForwardRefRenderFunction<
     onChange && onChange(event);
   };
 
+  useEffect(() => {
+    if(value === undefined) return
+    setSelfValue(value)
+  }, [value])
+
   return (
-    <div>
+    <div className={className}>
       {label && <InputLabel>{label}</InputLabel>}
       <div className={inputContainer}
       style={assignInlineVars({
@@ -102,7 +102,7 @@ const _Input: ForwardRefRenderFunction<
         {icon && <InputIcon icon={icon} {...iconProps}></InputIcon>}
         <input
           className={inputInner}
-          type={htmlType}
+          type={type}
           ref={ref}
           placeholder={placeholder}
           disabled={disabled}
