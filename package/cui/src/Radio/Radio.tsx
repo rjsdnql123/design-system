@@ -39,7 +39,7 @@ const Radio = ({
   const isDisabled = useMemo(() => disabled || disabledAll, [disabled, disabledAll])
 
   const changeHandler = (event: ChangeEvent<HTMLInputElement>) => {
-    if (disabled) return;
+    if (isDisabled) return;
     grouponChange && grouponChange(event)
     onChange && onChange(event);
   };

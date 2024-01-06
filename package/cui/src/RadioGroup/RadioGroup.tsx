@@ -31,7 +31,7 @@ const RadioGroup = (props: React.PropsWithChildren<RadioGroupProps>) => {
       value: radioSelfValue,
       disabled: disabled,
     }),
-    [name, radioSelfValue]
+    [name, radioSelfValue, disabled]
   );
 
   useEffect(() => {
