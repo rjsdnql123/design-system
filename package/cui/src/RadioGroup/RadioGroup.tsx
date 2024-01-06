@@ -1,4 +1,4 @@
-import React, { ChangeEvent, useEffect, useState } from "react";
+import React, { ChangeEvent, useEffect, useMemo, useState } from "react";
 import RadioGroupContext from "./RadioGroupContext";
 import { RadioGroupProps } from "./RadioGroup.type";
 import { radioGroupRootStyle, radioGroupRowStyle } from "./RadioGroup.css";
@@ -24,7 +24,7 @@ const RadioGroup = (props: React.PropsWithChildren<RadioGroupProps>) => {
     onChange && onChange(event);
   };
 
-  const contextValue = React.useMemo(
+  const contextValue = useMemo(
     () => ({
       name: name,
       onChange: updateState,
