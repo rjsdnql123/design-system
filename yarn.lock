@@ -2300,7 +2300,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@storybook/addon-actions@npm:8.0.8":
+"@storybook/addon-actions@npm:8.0.8, @storybook/addon-actions@npm:^8.0.8":
   version: 8.0.8
   resolution: "@storybook/addon-actions@npm:8.0.8"
   dependencies:
@@ -3505,6 +3505,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@vanilla-extract/dynamic@npm:^2.1.0":
+  version: 2.1.0
+  resolution: "@vanilla-extract/dynamic@npm:2.1.0"
+  dependencies:
+    "@vanilla-extract/private": "npm:^1.0.3"
+  checksum: 10c0/dcb8149bd815c4be75184f90e350750b6bc16ffdb5841f62f7211385478589dc0a0b261a442011149c2edbdbd83a956a425eec94f6c735f269a1cdb310541a66
+  languageName: node
+  linkType: hard
+
 "@vanilla-extract/integration@npm:^7.0.0, @vanilla-extract/integration@npm:^7.1.2":
   version: 7.1.2
   resolution: "@vanilla-extract/integration@npm:7.1.2"
@@ -3526,7 +3535,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@vanilla-extract/private@npm:^1.0.4":
+"@vanilla-extract/private@npm:^1.0.3, @vanilla-extract/private@npm:^1.0.4":
   version: 1.0.4
   resolution: "@vanilla-extract/private@npm:1.0.4"
   checksum: 10c0/d21d55a4892bc760cafdba7a4920a702a3fc29ed108977ad73ab0b92293c0b6bd55426a868d725eadda7b7b4ad8f44dadd7d6b28877c51421270b78bf53568b8
@@ -4527,6 +4536,7 @@ __metadata:
     "@rollup/plugin-commonjs": "npm:^25.0.7"
     "@rollup/plugin-node-resolve": "npm:^15.2.3"
     "@rollup/plugin-typescript": "npm:^11.1.6"
+    "@storybook/addon-actions": "npm:^8.0.8"
     "@storybook/addon-essentials": "npm:^8.0.8"
     "@storybook/addon-interactions": "npm:^8.0.8"
     "@storybook/addon-links": "npm:^8.0.8"
@@ -4539,6 +4549,7 @@ __metadata:
     "@types/react": "npm:^18.2.79"
     "@types/react-dom": "npm:^18.2.25"
     "@vanilla-extract/css": "npm:^1.14.2"
+    "@vanilla-extract/dynamic": "npm:^2.1.0"
     "@vanilla-extract/rollup-plugin": "npm:^1.3.4"
     "@vanilla-extract/vite-plugin": "npm:^4.0.7"
     mini-css-extract-plugin: "npm:^2.9.0"

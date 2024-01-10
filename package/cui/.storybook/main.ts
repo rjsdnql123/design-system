@@ -18,22 +18,23 @@ const config: StorybookConfig = {
     getAbsolutePath("@storybook/addon-essentials"),
     getAbsolutePath("@chromatic-com/storybook"),
     getAbsolutePath("@storybook/addon-interactions"),
+    getAbsolutePath("@storybook/addon-actions"),
   ],
   framework: {
     name: getAbsolutePath("@storybook/react-vite"),
     options: {},
   },
   core: {
-    builder: '@storybook/builder-vite', // 👈 The builder enabled here.
+    builder: "@storybook/builder-vite",
   },
   docs: {
     autodocs: "tag",
-    defaultName: 'Documentation',
+    defaultName: "Documentation",
   },
   async viteFinal(config) {
     return mergeConfig(config, {
-      plugins: [require("@vanilla-extract/vite-plugin").vanillaExtractPlugin()]
+      plugins: [require("@vanilla-extract/vite-plugin").vanillaExtractPlugin()],
     });
-  }
+  },
 };
 export default config;
