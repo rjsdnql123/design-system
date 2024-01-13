@@ -1,14 +1,15 @@
 import React from "react";
 import { useCalendar } from "../useCalendarHoos";
 import { calendarCellWrapperStyle, calendarWeekStyle, commonCalendarDaySpan, commonCalendarDayStyle } from "./CommonCalendar.css";
+import { CommonCalendarProps } from "./CommonCalendar.type";
 
-const CommonCalendarBody = ({ currentMonth }: any) => {
+const CommonCalendarBody = ({ currentMonth, className }: CommonCalendarProps) => {
   const { calendarWeek } = useCalendar({
     currentMonth,
   });
 
   return (
-    <div className={calendarCellWrapperStyle}>
+    <div className={`${calendarCellWrapperStyle} ${className}`}>
       {calendarWeek.map((week, index) => {
         return (
           <div className={calendarWeekStyle} key={index}>
