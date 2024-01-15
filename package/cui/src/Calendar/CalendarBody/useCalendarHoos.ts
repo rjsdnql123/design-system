@@ -1,5 +1,4 @@
 import dayjs from "dayjs";
-import { CommonDayjsType } from "src/shared/types/common.type";
 import { UseCalendarHooksProps } from "./Calendar.type";
 
 const useCalendar = ({ currentMonth = dayjs() }: UseCalendarHooksProps) => {

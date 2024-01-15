@@ -2,11 +2,17 @@ import React from "react";
 import { useCalendar } from "../useCalendarHoos";
 import { calendarCellWrapperStyle, calendarWeekStyle, commonCalendarDaySpan, commonCalendarDayStyle } from "./CommonCalendar.css";
 import { CommonCalendarProps } from "./CommonCalendar.type";
+import useCalendarGroupContext from "../../CalendarGroup/useCalendarGroupHooks";
 
 const CommonCalendarBody = ({ currentMonth, className }: CommonCalendarProps) => {
+  const { currentMonth: groupMonth, onChange: CalendarOnChange } =
+  useCalendarGroupContext();
+  
   const { calendarWeek } = useCalendar({
-    currentMonth,
+    currentMonth: groupMonth,
   });
+
+  
 
   return (
     <div className={`${calendarCellWrapperStyle} ${className}`}>
