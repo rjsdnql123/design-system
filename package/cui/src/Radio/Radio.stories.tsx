@@ -7,7 +7,6 @@ const meta: Meta<typeof Radio> = {
   component: Radio,
   tags: ["autodocs"],
   args: {
-    checked: true
   }
 };
 
