@@ -30,15 +30,13 @@ const CalendarHeader = React.memo(
     };
 
     return (
-      <div className={calendarHeaderWrapperStyle}>
-        <div className="date-controler">
+        <div className={calendarHeaderWrapperStyle}>
           {prev && <div onClick={prev}>이전</div>}
           <div className="selected-date">
             {curr.format("YY")}년 {curr.format("M")}월
           </div>
           {next && <div onClick={next}>다음</div>}
         </div>
-      </div>
     );
   }
 );

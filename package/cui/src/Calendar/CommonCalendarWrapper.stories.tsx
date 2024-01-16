@@ -4,12 +4,15 @@ import { CalendalDays } from "./CalendalDays";
 import { CommonCalendarBody } from "./CalendarBody/CommonCaldendarBody/CommonCalendarBody";
 import React from "react";
 import { RadioGroup } from "./CalendarGroup/CalendarGroup";
+import { commonCalendarWrapperStyle } from "./CommonCalendarWrapper.css";
 
 export const CalendarComb = () => (
   <RadioGroup>
-    <CalendarHeader />
-    <CalendalDays />
-    <CommonCalendarBody />
+    <div className={commonCalendarWrapperStyle}>
+      <CalendarHeader />
+      <CalendalDays />
+      <CommonCalendarBody />
+    </div>
   </RadioGroup>
 );
 
