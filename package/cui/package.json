@@ -1,5 +1,5 @@
 {
-  "name": "cui",
+  "name": "@monorepo/cui",
   "main": "./dist/bundle.js",
   "type": "module",
   "scripts": {

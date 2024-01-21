@@ -1,7 +1,7 @@
 import React from "react";
 import { ForwardRefRenderFunction, forwardRef } from "react";
 import { container } from "./Button.css";
-import { ButtonTypes } from "src/utils/propsType";
+import { ButtonTypes } from "../utils/propsType";
 
 export interface ButtonProp {
   buttonType?: ButtonTypes;
