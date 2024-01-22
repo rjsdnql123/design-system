@@ -1,5 +1,4 @@
-import { CommonDayjsType } from "src/shared/types/common.type";
-
+import { CommonDayjsType } from "../../../shared/types/common.type";
 export interface CommonCalendarProps {
     currentMonth?: CommonDayjsType;
     className?: string;

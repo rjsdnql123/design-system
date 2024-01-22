@@ -1,5 +1,5 @@
 import { style } from "@vanilla-extract/css";
-import { vars } from "src/theme/theme.css";
+// import { vars } from "../theme/theme.css";
 
 export const container = style({
   display: 'block',
@@ -16,5 +16,5 @@ export const container = style({
   fontSize: '18px',
   fontWeight: '700',
   cursor: 'pointer',
-  color: vars.color.primary
+  // color: vars.color.primary
 })

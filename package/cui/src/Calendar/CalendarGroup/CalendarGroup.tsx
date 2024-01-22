@@ -1,7 +1,7 @@
 import React, { useMemo, useState } from "react";
 import dayjs from "dayjs";
 import RadioGroupContext from "./CalendarGroupContext";
-import { CommonDayjsType } from "src/shared/types/common.type";
+import { CommonDayjsType } from "../../shared/types/common.type";
 
 const RadioGroup = ({ currentMonth = dayjs(), onChange, children }: any) => {
   const [radioSelfValue, setRadioSelfValue] =

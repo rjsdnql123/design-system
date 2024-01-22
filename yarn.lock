@@ -2100,13 +2100,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@monorepo/common@npm:*, @monorepo/common@workspace:package/common":
+"@monorepo/common@workspace:*, @monorepo/common@workspace:package/common":
   version: 0.0.0-use.local
   resolution: "@monorepo/common@workspace:package/common"
   languageName: unknown
   linkType: soft
 
-"@monorepo/cui@workspace:package/cui":
+"@monorepo/cui@workspace:*, @monorepo/cui@workspace:package/cui":
   version: 0.0.0-use.local
   resolution: "@monorepo/cui@workspace:package/cui"
   dependencies:
@@ -2155,10 +2155,13 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@monorepo/test-app@workspace:package/monorepo-test-app"
   dependencies:
-    "@monorepo/common": "npm:*"
+    "@monorepo/common": "workspace:*"
+    "@monorepo/cui": "workspace:*"
     "@types/node": "npm:^20"
     "@types/react": "npm:^18"
     "@types/react-dom": "npm:^18"
+    "@vanilla-extract/css": "npm:^1.14.2"
+    "@vanilla-extract/next-plugin": "npm:^2.4.0"
     eslint: "npm:^8"
     eslint-config-next: "npm:14.2.3"
     next: "npm:14.2.3"
@@ -3902,6 +3905,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@vanilla-extract/next-plugin@npm:^2.4.0":
+  version: 2.4.0
+  resolution: "@vanilla-extract/next-plugin@npm:2.4.0"
+  dependencies:
+    "@vanilla-extract/webpack-plugin": "npm:^2.3.7"
+  peerDependencies:
+    next: ">=12.1.7"
+  checksum: 10c0/9a8e30607437769c215df3e13e2261976513d73b288f30408e03b16ac7cd2224eec2b47366159c18f4c44fdf7ef0534661071cd3adf4aef5f526a1881bc53124
+  languageName: node
+  linkType: hard
+
 "@vanilla-extract/private@npm:^1.0.3, @vanilla-extract/private@npm:^1.0.4":
   version: 1.0.4
   resolution: "@vanilla-extract/private@npm:1.0.4"
@@ -3928,6 +3942,20 @@ __metadata:
   peerDependencies:
     vite: ^4.0.3 || ^5.0.0
   checksum: 10c0/1d9dd8bdd7767301755ad6f9a4bbecada2437becdb9c28f900d0881bd8206a26762c1d45e24acae673fd68b31debf083deabf76c49a695adf6566176e6932ee2
+  languageName: node
+  linkType: hard
+
+"@vanilla-extract/webpack-plugin@npm:^2.3.7":
+  version: 2.3.7
+  resolution: "@vanilla-extract/webpack-plugin@npm:2.3.7"
+  dependencies:
+    "@vanilla-extract/integration": "npm:^7.0.0"
+    chalk: "npm:^4.1.1"
+    debug: "npm:^4.3.1"
+    loader-utils: "npm:^2.0.0"
+  peerDependencies:
+    webpack: ^4.30.0 || ^5.20.2
+  checksum: 10c0/804e78af13d7eb779e16876456fb35c8ae30f903a2e82284de59ef727c9977e6b40cbf2b7f1b740e3e33a35ad4c13be46b76aeef633b1173c9bb2c4b501b5ddd
   languageName: node
   linkType: hard
 
@@ -4500,6 +4528,13 @@ __metadata:
   version: 1.6.52
   resolution: "big-integer@npm:1.6.52"
   checksum: 10c0/9604224b4c2ab3c43c075d92da15863077a9f59e5d4205f4e7e76acd0cd47e8d469ec5e5dba8d9b32aa233951893b29329ca56ac80c20ce094b4a647a66abae0
+  languageName: node
+  linkType: hard
+
+"big.js@npm:^5.2.2":
+  version: 5.2.2
+  resolution: "big.js@npm:5.2.2"
+  checksum: 10c0/230520f1ff920b2d2ce3e372d77a33faa4fa60d802fe01ca4ffbc321ee06023fe9a741ac02793ee778040a16b7e497f7d60c504d1c402b8fdab6f03bb785a25f
   languageName: node
   linkType: hard
 
@@ -5459,6 +5494,13 @@ __metadata:
   version: 9.2.2
   resolution: "emoji-regex@npm:9.2.2"
   checksum: 10c0/af014e759a72064cf66e6e694a7fc6b0ed3d8db680427b021a89727689671cefe9d04151b2cad51dbaf85d5ba790d061cd167f1cf32eb7b281f6368b3c181639
+  languageName: node
+  linkType: hard
+
+"emojis-list@npm:^3.0.0":
+  version: 3.0.0
+  resolution: "emojis-list@npm:3.0.0"
+  checksum: 10c0/7dc4394b7b910444910ad64b812392159a21e1a7ecc637c775a440227dcb4f80eff7fe61f4453a7d7603fa23d23d30cc93fe9e4b5ed985b88d6441cd4a35117b
   languageName: node
   linkType: hard
 
@@ -7849,7 +7891,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"json5@npm:^2.2.2, json5@npm:^2.2.3":
+"json5@npm:^2.1.2, json5@npm:^2.2.2, json5@npm:^2.2.3":
   version: 2.2.3
   resolution: "json5@npm:2.2.3"
   bin:
@@ -7954,6 +7996,17 @@ __metadata:
   version: 1.2.4
   resolution: "lines-and-columns@npm:1.2.4"
   checksum: 10c0/3da6ee62d4cd9f03f5dc90b4df2540fb85b352081bee77fe4bbcd12c9000ead7f35e0a38b8d09a9bb99b13223446dd8689ff3c4959807620726d788701a83d2d
+  languageName: node
+  linkType: hard
+
+"loader-utils@npm:^2.0.0":
+  version: 2.0.4
+  resolution: "loader-utils@npm:2.0.4"
+  dependencies:
+    big.js: "npm:^5.2.2"
+    emojis-list: "npm:^3.0.0"
+    json5: "npm:^2.1.2"
+  checksum: 10c0/d5654a77f9d339ec2a03d88221a5a695f337bf71eb8dea031b3223420bb818964ba8ed0069145c19b095f6c8b8fd386e602a3fc7ca987042bd8bb1dcc90d7100
   languageName: node
   linkType: hard
 
