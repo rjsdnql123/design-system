@@ -1,3 +1,5 @@
+'use client'
+
 import React, { ChangeEvent, useMemo } from "react";
 import { RadioProps } from "./types";
 import { inputStyle, radioLabelStyle } from "./Radio.css";
