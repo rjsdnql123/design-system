@@ -1,14 +1,13 @@
-import React from "react";
-import { RadioGroupContextValue } from "./RadioGroup.type";
+import React from 'react';
+import { RadioGroupContextValue } from './RadioGroup.type';
 
 const defaultContext = {
-  name: "",
+  name: '',
   onChange: () => {},
-  value: "",
-  disabled: false
+  value: '',
+  disabled: false,
 };
 
-const RadioGroupContext =
-  React.createContext<RadioGroupContextValue>(defaultContext);
+const RadioGroupContext = React.createContext<RadioGroupContextValue>(defaultContext);
 
 export default RadioGroupContext;

@@ -1,8 +1,8 @@
 /** @type {import('next').NextConfig} */
-import {createVanillaExtractPlugin} from '@vanilla-extract/next-plugin';
+import { createVanillaExtractPlugin } from '@vanilla-extract/next-plugin';
 
 const nextConfig = {
-    transpilePackages: ['@monorepo/cui']
+  transpilePackages: ['@monorepo/cui'],
 };
 
-export default createVanillaExtractPlugin(nextConfig)
+export default createVanillaExtractPlugin(nextConfig);

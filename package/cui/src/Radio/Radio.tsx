@@ -1,12 +1,12 @@
-'use client'
+'use client';
 
-import React, { ChangeEvent, useMemo } from "react";
-import { RadioProps } from "./types";
-import { inputStyle, radioLabelStyle } from "./Radio.css";
-import useRadioGroup from "../RadioGroup/useRadioHooks";
+import React, { ChangeEvent, useMemo } from 'react';
+import { RadioProps } from './types';
+import { inputStyle, radioLabelStyle } from './Radio.css';
+import useRadioGroup from '../RadioGroup/useRadioHooks';
 
 function areEqualValues(a: any, b: any) {
-  if (typeof b === "object" && b !== null) {
+  if (typeof b === 'object' && b !== null) {
     return a === b;
   }
 
@@ -24,10 +24,15 @@ const Radio = ({
   value: radioValue,
   ...other
 }: React.PropsWithChildren<RadioProps>) => {
-  const {name: groupName, value: groupValue, onChange: grouponChange, disabled: disabledAll } = useRadioGroup();
+  const {
+    name: groupName,
+    value: groupValue,
+    onChange: grouponChange,
+    disabled: disabledAll,
+  } = useRadioGroup();
 
   let name = nameProps;
-  let checked = radioCehcekd
+  let checked = radioCehcekd;
 
   if (groupValue || groupName) {
     if (typeof checked === 'undefined') {
@@ -38,15 +43,13 @@ const Radio = ({
     }
   }
 
-  const isDisabled = useMemo(() => disabled || disabledAll, [disabled, disabledAll])
+  const isDisabled = useMemo(() => disabled || disabledAll, [disabled, disabledAll]);
 
   const changeHandler = (event: ChangeEvent<HTMLInputElement>) => {
     if (isDisabled) return;
-    grouponChange && grouponChange(event)
+    grouponChange && grouponChange(event);
     onChange && onChange(event);
   };
-
-  
 
   return (
     <label htmlFor={id} className={`${radioLabelStyle} ${className}`}>

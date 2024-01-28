@@ -1,10 +1,7 @@
-import { style } from "@vanilla-extract/css";
+import { style } from '@vanilla-extract/css';
 
-export const radioGroupRootStyle = style({
-
-});
+export const radioGroupRootStyle = style({});
 
 export const radioGroupRowStyle = style({
-    display: 'flex'
+  display: 'flex',
 });
-

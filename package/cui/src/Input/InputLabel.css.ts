@@ -1,13 +1,13 @@
-import { createVar, style } from "@vanilla-extract/css";
+import { createVar, style } from '@vanilla-extract/css';
 
 const addonBase = style({
-  display: "inline-flex",
-  width: "initial",
-  height: "100%",
-  alignItems: "center",
-  pointerEvents: "none",
+  display: 'inline-flex',
+  width: 'initial',
+  height: '100%',
+  alignItems: 'center',
+  pointerEvents: 'none',
   margin: 0,
-  fontSize: "inherit",
+  fontSize: 'inherit',
   lineHeight: 1,
 });
 

@@ -1,4 +1,4 @@
-import { ChangeEvent } from "react";
+import { ChangeEvent } from 'react';
 
 export interface RadioGroupProps {
   value?: string | number;
@@ -17,5 +17,5 @@ export interface RadioGroupProps {
 
 export type RadioGroupContextValue = Pick<
   RadioGroupProps,
-  "name" | "onChange" | "value" | "disabled"
+  'name' | 'onChange' | 'value' | 'disabled'
 >;

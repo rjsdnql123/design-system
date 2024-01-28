@@ -1,4 +1,4 @@
-import { ChangeEvent } from "react";
+import { ChangeEvent } from 'react';
 
 export interface RadioProps extends React.HTMLAttributes<HTMLInputElement> {
   checked?: boolean;

@@ -1,14 +1,8 @@
-import React, {
-  ForwardRefRenderFunction,
-  forwardRef,
-  useEffect,
-  useMemo,
-  useState,
-} from "react";
-import InputIcon from "./InputIcon";
-import { inputContainer, inputDisabled, inputInner } from "./Input.css";
-import InputLabel from "./InputLabel";
-import { assignInlineVars } from "@vanilla-extract/dynamic";
+import React, { ForwardRefRenderFunction, forwardRef, useEffect, useMemo, useState } from 'react';
+import InputIcon from './InputIcon';
+import { inputContainer, inputDisabled, inputInner } from './Input.css';
+import InputLabel from './InputLabel';
+import { assignInlineVars } from '@vanilla-extract/dynamic';
 
 export type InputProps = {
   value?: string;
@@ -30,10 +24,7 @@ export type InputProps = {
   autoComplete?: string;
 };
 
-const _Input: ForwardRefRenderFunction<
-  HTMLInputElement,
-  React.PropsWithChildren<InputProps>
-> = (
+const _Input: ForwardRefRenderFunction<HTMLInputElement, React.PropsWithChildren<InputProps>> = (
   {
     label,
     labelRight,
@@ -55,9 +46,9 @@ const _Input: ForwardRefRenderFunction<
     disabled,
     ...props
   }: React.PropsWithChildren<InputProps>,
-  ref
+  ref,
 ) => {
-  const [selfValue, setSelfValue] = useState<string>(initialValue || "");
+  const [selfValue, setSelfValue] = useState<string>(initialValue || '');
 
   const focusHandler = (e: React.FocusEvent<HTMLInputElement>) => {
     onFocus && onFocus(e);
@@ -77,7 +68,7 @@ const _Input: ForwardRefRenderFunction<
       clickable: iconClickable,
       onClick: iconClickHandler,
     }),
-    [iconClickable, iconClickHandler]
+    [iconClickable, iconClickHandler],
   );
 
   const changeHandler = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -87,18 +78,18 @@ const _Input: ForwardRefRenderFunction<
   };
 
   useEffect(() => {
-    if(value === undefined) return
-    setSelfValue(value)
-  }, [value])
+    if (value === undefined) return;
+    setSelfValue(value);
+  }, [value]);
 
   return (
     <div className={className}>
       {label && <InputLabel>{label}</InputLabel>}
-      <div className={inputContainer}
-      style={assignInlineVars({
-        [inputDisabled]: disabled ? 'lightgray' : null
-      })}
-      >
+      <div
+        className={inputContainer}
+        style={assignInlineVars({
+          [inputDisabled]: disabled ? 'lightgray' : null,
+        })}>
         {icon && <InputIcon icon={icon} {...iconProps}></InputIcon>}
         <input
           className={inputInner}
