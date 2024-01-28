@@ -7,6 +7,6 @@ const defaultContext = {
   onChange: () => {},
 };
 
-const RadioGroupContext = React.createContext<CalendarGroupContextTyped>(defaultContext);
+const CalendarGroupContext = React.createContext<CalendarGroupContextTyped>(defaultContext);
 
-export default RadioGroupContext;
+export default CalendarGroupContext;

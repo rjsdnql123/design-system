@@ -1,9 +1,9 @@
 import React, { useMemo, useState } from 'react';
 import dayjs from 'dayjs';
-import RadioGroupContext from './CalendarGroupContext';
+import CalendarGroupContext from './CalendarGroupContext';
 import { CommonDayjsType } from '../../shared/types/common.type';
 
-const RadioGroup = ({ currentMonth = dayjs(), onChange, children }: any) => {
+const CalendarGroup = ({ currentMonth = dayjs(), onChange, children }: any) => {
   const [radioSelfValue, setRadioSelfValue] = useState<CommonDayjsType>(currentMonth);
 
   const updateState = (day: CommonDayjsType) => {
@@ -19,7 +19,7 @@ const RadioGroup = ({ currentMonth = dayjs(), onChange, children }: any) => {
     [currentMonth],
   );
 
-  return <RadioGroupContext.Provider value={contextValue}>{children}</RadioGroupContext.Provider>;
+  return <CalendarGroupContext.Provider value={contextValue}>{children}</CalendarGroupContext.Provider>;
 };
 
-export { RadioGroup };
+export { CalendarGroup };
