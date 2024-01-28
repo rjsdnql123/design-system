@@ -1,3 +1,3 @@
 type ButtonTypes = 'button' | 'submit' | 'reset';
 
-export { ButtonTypes };
+export type { ButtonTypes };
