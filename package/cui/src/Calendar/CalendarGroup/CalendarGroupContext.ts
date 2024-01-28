@@ -1,3 +1,4 @@
+'use client';
 import React from 'react';
 import { CalendarGroupContextTyped } from './CalendarGroupContext.type';
 import dayjs from 'dayjs';

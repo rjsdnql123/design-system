@@ -1,3 +1,4 @@
+'use client'
 import { calendarHeaderWrapperStyle } from './CalendalHeader.css';
 import { CalendalHeaderProps } from './CalendalHeader.type';
 import React, { useEffect, useState } from 'react';

@@ -1,3 +1,4 @@
+'use client';
 import React, { useMemo, useState } from 'react';
 import dayjs from 'dayjs';
 import CalendarGroupContext from './CalendarGroupContext';
@@ -19,7 +20,9 @@ const CalendarGroup = ({ currentMonth = dayjs(), onChange, children }: any) => {
     [currentMonth],
   );
 
-  return <CalendarGroupContext.Provider value={contextValue}>{children}</CalendarGroupContext.Provider>;
+  return (
+    <CalendarGroupContext.Provider value={contextValue}>{children}</CalendarGroupContext.Provider>
+  );
 };
 
 export { CalendarGroup };
