@@ -2151,9 +2151,9 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@monorepo/test-app@workspace:package/monorepo-test-app":
+"@monorepo/test-app@workspace:apps/monorepo-test-app":
   version: 0.0.0-use.local
-  resolution: "@monorepo/test-app@workspace:package/monorepo-test-app"
+  resolution: "@monorepo/test-app@workspace:apps/monorepo-test-app"
   dependencies:
     "@monorepo/common": "workspace:*"
     "@monorepo/cui": "workspace:*"

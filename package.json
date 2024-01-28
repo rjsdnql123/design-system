@@ -2,7 +2,8 @@
   "name": "design-system",
   "workspaces": {
     "packages": [
-      "package/*"
+      "package/*",
+      "apps/*"
     ]
   },
   "scripts": {
