@@ -1,6 +1,6 @@
-async function getProjects() {
+async function getProjects():Promise<string> {
   return new Promise((res, rej) => {
-    res('123123')
+    res('qweqweqweqweqweqweqwe')
   })
 }
 
@@ -8,7 +8,7 @@ export default async function  Test() {
   const a = await getProjects()
     return (
       <main>
-        qwkejqlwkejqwlke
+        ㅁㄴㅇㄹㅁㄴㄹㅁㄴㅇㄹㅁㄴㄹㅁㄴㅇ
         <div>
           {a}
         </div>
