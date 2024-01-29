@@ -7,7 +7,7 @@ export default function Home() {
     <main>
       <Button>dd</Button>
       <Radio />
-      <Link href={'/test'} > go test</Link>
+      <Link href='https://design-system-monorepo-test-app.vercel.app/test' > go test</Link>
     </main>
   );
 }
