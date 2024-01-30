@@ -2,7 +2,6 @@ import { createRandomId } from '@monorepo/common';
 import { Button } from '@monorepo/cui';
 import { Radio } from '@monorepo/cui';
 import Link from 'next/link';
-import { useId } from 'react';
 
 export default function Home() {
   const asdf = createRandomId();
@@ -12,7 +11,7 @@ export default function Home() {
       <Button>dd</Button>
       {asdf}
       <Radio />
-      <Link href={`https://design-system-monorepo-test-app.vercel.app/test/${asdf}`} > go test</Link>
+      <Link href={`http://localhost:3000/test/${asdf}`} > go test</Link>
     </main>
   );
 }

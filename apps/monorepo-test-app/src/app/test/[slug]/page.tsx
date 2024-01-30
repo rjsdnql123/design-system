@@ -1,6 +1,11 @@
+import { createRandomId } from "@monorepo/common";
+import Link from "next/link";
+
+
 async function getProjects():Promise<string> {
   return new Promise((res, rej) => {
-    res('qweqweqweqweqweqweqwe')
+    const asdf = createRandomId();
+    res('asdf123123213 - ' + asdf)
   })
 }
 
@@ -11,6 +16,9 @@ export default async function  Test() {
         ㅁㄴㅇㄹㅁㄴㄹㅁㄴㅇㄹㅁㄴㄹㅁㄴㅇ
         <div>
           {a}
+        </div>
+        <div>
+          <Link href={`http://localhost:3000/test/${a}`}></Link>
         </div>
       </main>
     );
