@@ -1,3 +1,3 @@
-export { Button } from './Button/Button';
+export { Button } from './Components/Button/Button';
 export { Radio } from './Radio/Radio';
-export { CalendalDays, CalendarGroup, CalendarHeader, CommonCalendarBody } from './Calendar';
+export { CalendalDays, CalendarGroup, CalendarHeader, CommonCalendarBody } from './Components/Calendar';

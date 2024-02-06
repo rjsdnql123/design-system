@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { CalendalDays } from './';
+import { CalendalDays } from '.';
 
 const meta: Meta<typeof CalendalDays> = {
   title: 'CalendalDays',

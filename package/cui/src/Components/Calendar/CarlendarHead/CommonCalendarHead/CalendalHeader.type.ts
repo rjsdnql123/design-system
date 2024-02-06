@@ -1,4 +1,4 @@
-import { CommonDayjsType } from '../../../shared/types/common.type';
+import { CommonDayjsType } from '../../../../shared/types/common.type';
 
 interface CalendalHeaderProps {
   currentMonth?: CommonDayjsType;
