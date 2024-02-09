@@ -15,7 +15,7 @@ const CountShadowDom: React.FC = () => {
       <div>
         쉐도우 돔이 아닙니다.
       </div>
-      <ShadowDom css='div {color: blue;} span {background: red;};'>
+      <ShadowDom css='div {color: blue;} * {background: red;};'>
         쉐도우 돔 안에 있는 children
         <span>dd</span>
       </ShadowDom>
