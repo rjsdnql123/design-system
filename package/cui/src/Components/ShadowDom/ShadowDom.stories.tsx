@@ -1,15 +1,13 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import React, { useState } from 'react';
-import { Radio } from '../Radio/Radio';
 import ShadowDom from './ShadowDom';
 import './test.css'
-const CountShadowDom: React.FC = () => {
-  const [count, setCount] = useState<number>(0);
- 
-  const onclick = () => {
-    setCount(count + 1);
-  };
- 
+
+
+
+
+const CustomShadowDom: React.FC = () => {
+
   return (
     <div>
       <div>
@@ -24,8 +22,8 @@ const CountShadowDom: React.FC = () => {
  };
 
 const meta: Meta<typeof ShadowDom> = {
-  title: 'CountShadowDom',
-  component: CountShadowDom,
+  title: 'CustomShadowDom',
+  component: CustomShadowDom,
   tags: ['autodocs'],
   args: {},
 };
