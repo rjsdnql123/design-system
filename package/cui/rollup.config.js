@@ -4,6 +4,8 @@ import { nodeResolve } from '@rollup/plugin-node-resolve';
 import typescript from '@rollup/plugin-typescript';
 import peerDepsExternal from 'rollup-plugin-peer-deps-external';
 import { vanillaExtractPlugin } from '@vanilla-extract/rollup-plugin';
+import { importMetaAssets } from 'rollup-plugin-import';
+import postcss from 'rollup-plugin-postcss';
 
 const extensions = ['js', 'jsx', 'ts', 'tsx', 'mjs'];
 
@@ -43,6 +45,10 @@ const config = [
       vanillaExtractPlugin({
         identifiers: ({ hash }) => `prefix_${hash}`,
       }),
+      importMetaAssets({
+        extensions: ['.css'],
+      }),
+      postcss(),
     ],
   },
 ];

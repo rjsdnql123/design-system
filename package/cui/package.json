@@ -8,8 +8,8 @@
   "scripts": {
     "build": "rollup -c",
     "watch": "rollup -cw",
-    "storybook": "storybook dev -p 6006 -s public",
-    "build-storybook": "storybook build -s public"
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
   },
   "dependencies": {
     "@vanilla-extract/css": "^1.14.2",
@@ -44,7 +44,9 @@
     "@vanilla-extract/vite-plugin": "^4.0.7",
     "mini-css-extract-plugin": "^2.9.0",
     "rollup": "^4.14.3",
+    "rollup-plugin-import": "^1.1.1",
     "rollup-plugin-peer-deps-external": "^2.2.4",
+    "rollup-plugin-postcss": "^4.0.2",
     "storybook": "^8.0.8",
     "tslib": "^2.6.2",
     "typescript": "^5.4.5",
