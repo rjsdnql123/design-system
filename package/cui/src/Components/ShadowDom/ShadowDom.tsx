@@ -2,7 +2,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import ReactDOM from 'react-dom';
 import './test.css';
-
+import { createRoot } from 'react-dom/client';
 interface ShadowCounterProps {
   css?: string;
   children: React.ReactNode;
@@ -23,7 +23,9 @@ const ShadowDom: React.FC<ShadowCounterProps> = ({ css, children }) => {
 
     const reactElement = children;
     const container = document.createElement('div');
-    ReactDOM.render(reactElement, container);
+    const root = createRoot(container);
+    root.render(reactElement)
+    
     shadowRoot.current!.adoptedStyleSheets.push(sheet);
     shadowRoot.current!.appendChild(container);
 
